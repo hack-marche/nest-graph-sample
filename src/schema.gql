@@ -5,7 +5,7 @@
 type Book {
   id: ID!
   title: String!
-  author: String!
+  author: [String!]!
   price: Int!
   createdAt: DateTime!
 }
@@ -27,12 +27,23 @@ type Mutation {
 }
 
 input CreateBookInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  """title field (placeholder)"""
+  title: String!
+
+  """author field (placeholder)"""
+  author: String!
+
+  """price field (placeholder)"""
+  price: Int!
 }
 
 input UpdateBookInput {
   """Example field (placeholder)"""
-  exampleField: Int
-  id: Int!
+  title: String!
+
+  """author field (placeholder)"""
+  author: String
+
+  """price field (placeholder)"""
+  price: Int
 }

@@ -10,6 +10,9 @@ export class BooksResolver {
 
   @Mutation(() => Book)
   createBook(@Args('createBookInput') createBookInput: CreateBookInput) {
+    console.log('*****:');
+    console.log(createBookInput);
+
     return this.booksService.create(createBookInput);
   }
 
@@ -25,7 +28,7 @@ export class BooksResolver {
 
   @Mutation(() => Book)
   updateBook(@Args('updateBookInput') updateBookInput: UpdateBookInput) {
-    return this.booksService.update(updateBookInput.id, updateBookInput);
+    return this.booksService.update(updateBookInput);
   }
 
   @Mutation(() => Book)
