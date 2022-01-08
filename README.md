@@ -66,7 +66,7 @@ http://localhost:3000/graphql
 
 ```
 {
-	books {
+  books {
     title
     id
   }
@@ -77,7 +77,7 @@ http://localhost:3000/graphql
 
 ```
 {
-	book(id: 1) {
+  book(id: 1) {
     title
     id
   }
@@ -88,7 +88,7 @@ http://localhost:3000/graphql
 
 ```
 mutation AddBook {
-	createBook(createBookInput: {
+  createBook(createBookInput: {
     title: "new book",
     author: "著者１",
     price: 1001,
